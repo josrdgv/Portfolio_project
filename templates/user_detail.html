@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'assests/portfolio.css' %}">
+    <title>User profile</title>
+</head>
+<body>
+<div class="workfolio">
+<!-- <h3>User Profile</h3> -->
+<img src="{{ user.profile_pic.url }}" class="image"><br>
+<div class="detail">
+<label for="" id="name">{{ user.username }}</label><br>
+<label for="">{{ user.position }}</label><br>
+
+<label for="" id="email">{{ user.Email }}</label><br>
+<label for="" id="number">{{ user.Mobile_number }}</label><br>
+</div>
+<div class="perde">
+    <h4>PERSONAL DETAILS</h4>
+<label for="" id="age">Age:</label>{{ user.age }}<br>
+<label for="" id="address">{{ user.Address }}</label><br>
+<label for=""id="gender">{{ user.Gender }}</label><br>
+
+<h4>SKILLS</h4>
+<label for="">{{ user.Skills }}</label><br>
+</div>
+
+<div class="exp">
+    <h4 id="expe">EXPERIENCE</h4>
+
+    <label for="">{{ user.experience }}</label><br>
+
+ <h4 id="project">Projects:</h4><br>
+ <label for="">{{ user.projects }}</label><br>
+</div>
+
+
+<!--<label for="">certificates:</label>{{ user. }}<br>-->
+
+</div>
+<a href="{% url 'update_profile' user.id %}"> Update</a>
+
+</body>
+</html>

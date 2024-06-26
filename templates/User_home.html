@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'assests/web.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>website</title>
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="logo">
+        <h3>Logo</h3>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+   {% for users in user %}
+
+        <li><a href="{% url 'detail' users.id %}">Profile</a></li>
+        {% endfor %}
+        <li>Products
+            <select >
+                <option>
+                </option>
+            </select>
+        </li>
+
+    </ul>
+</div>
+    <div class="search-btn">
+        <input type="text" placeholder="Search iteams">
+        <button class="button">Search</button>
+    </div>
+</div>
+<div class="main-part">
+    <h5 class="head"><b>PortCasio</b></h5>
+    <p>Do you want to enhance you skill to land a job. We will help u....</p>
+    <a href="{% url 'create' %}" class="btn btn-warning">Create profile</a>
+</div>
+<div class="content-part">
+    <label id="first">Superior Collaboration</label><label id="snd">Visualize Quality</label>
+    <p>proactively envisioned multimedia expertise and cross-media growth strategies.Seemingly visualize quality intellectual
+    capital without superior collaboration and idea-sharing </p>
+</div>
+<div  id="frame">
+<div class="frame">
+
+</div>
+<h2 id="caption">Efficently Unleash</h2>
+
+<div class="frame2">
+
+</div>
+<h2 id="caption1">Completly Synergize</h2>
+<div class="frame3">
+
+</div>
+<h2 id="caption2">Dynamically procastinate</h2>
+</div>
+</body>
+</html>
+
+<!-- {% for users in user %}-->
+
+
+<!--<p>if you are alreadycreated your porfolio view it</p>-->
+<!--<a href="{% url 'detail' users.id %}">Profile</a>-->
+
+<!--{% endfor %}
